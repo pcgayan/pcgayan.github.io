@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ktronics AB – Electronics, Solar & IT Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ktronics AB – electronics, solar energy and IT solutions based in Sweden." />
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --bg: #0b1120;
+      --text: #e5e7eb;
+      --card-bg: #020617;
+      --accent: #22c55e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 50%, #000 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 0 24px;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .hero {
+      padding: 32px 0 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 10px 30px rgba(15, 118, 110, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(15, 118, 110, 0.7);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: #4b5563;
+    }
+    .btn-outline:hover {
+      background: #111827;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.06), transparent 60%);
+      border-radius: 18px;
+      border: 1px solid #1f2937;
+      padding: 18px 16px;
+      font-size: 0.86rem;
+      color: #9ca3af;
+    }
+
+    .hero-card h2 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .section {
+      padding: 20px 0;
+      border-top: 1px solid #111827;
+      margin-top: 10px;
+    }
+
+    .section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #020617, #020617);
+      border-radius: 16px;
+      padding: 14px 14px 16px;
+      border: 1px solid #1f2937;
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .contact-list li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      border-top: 1px solid #111827;
+      margin-top: 24px;
+      padding-top: 14px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="logo">Ktronics AB</div>
+        <div class="tagline">Electronics • Solar Energy • IT & Integration</div>
+      </div>
+      <div class="tagline">
+        Katrineholm, Sweden<br />
+        Org.nr: 559469-3508
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div>
+          <div class="badge">Technology & Energy Solutions</div>
+          <h1>Smart electronics and solar solutions for homes, companies and partners.</h1>
+          <p>
+            Ktronics AB helps customers design, build and maintain practical technology:
+            solar and battery systems, small electronics projects and modern integration
+            and cloud solutions.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Contact Ktronics AB</a>
+            <a href="#services" class="btn btn-outline">View services</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>About Ktronics AB</h2>
+          <p>
+            Ktronics AB is a small Swedish company founded by
+            <strong>Gayan Kandaudage (M.Sc. in Electronics, M.Sc. in Computer Science)</strong>.
+            We combine hands-on hardware experience with software and cloud expertise.
+          </p>
+        </aside>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section" id="services">
+        <h2>What we do</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Solar & Battery Solutions</h3>
+            <p class="muted">
+              Design and advice for residential and small-business solar installations,
+              off-grid and hybrid systems, and battery storage optimization.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Electronics & Repair</h3>
+            <p class="muted">
+              Troubleshooting and repair of power electronics, inverters, chargers and
+              small electronic devices. Practical, component-level diagnostics.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Software, Cloud & Integration</h3>
+            <p class="muted">
+              Architecture and development for integrations, APIs and data platforms.
+              Experience with ERP, DevOps, observability and cloud-native systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p class="muted">
+          The fastest way to reach us is by email. Please describe your need briefly
+          (solar, electronics, repair, software, etc.), and we will get back to you.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:gcgayan@gmail.com">gcgayan@gmail.com</a></li>
+          <li><strong>Phone:</strong> +46&nbsp;72&nbsp;181&nbsp;9572</li>
+          <li><strong>Location:</strong> Katrineholm, Sweden</li>
+          <li><strong>Company:</strong> Ktronics AB</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
+      <span>Website hosted on GitHub Pages.</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
