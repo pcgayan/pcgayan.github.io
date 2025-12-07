@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ktronics AB – Electronics, Solar & IT Solutions</title>
+  <title>Ktronics AB – Embedded, Energy & IT Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ktronics AB – electronics, solar energy and IT solutions based in Sweden." />
+  <meta name="description" content="Ktronics AB – energy systems, electronics and IT consulting based in Katrineholm, Sweden." />
   <style>
     :root {
       --primary: #0f766e;
       --primary-dark: #115e59;
-      --bg: #0b1120;
+      --bg: #020617;
       --text: #e5e7eb;
       --card-bg: #020617;
       --accent: #22c55e;
+      --border-subtle: #1f2937;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,13 +23,14 @@
       background: radial-gradient(circle at top, #0f172a 0, #020617 50%, #000 100%);
       color: var(--text);
       line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .page {
-      max-width: 960px;
+      max-width: 1040px;
       margin: 0 auto;
       padding: 24px 16px 48px;
     }
@@ -39,13 +41,28 @@
       align-items: center;
       gap: 16px;
       padding: 8px 0 24px;
-      border-bottom: 1px solid #1f2937;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-image {
+      height: 52px;
+      width: auto;
+      border-radius: 12px;
+      background: radial-gradient(circle at top, rgba(34,197,94,0.35), transparent 65%);
+      padding: 4px;
+      border: 1px solid rgba(148,163,184,0.2);
     }
 
     .logo {
       font-weight: 700;
       font-size: 1.3rem;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
     }
@@ -56,39 +73,50 @@
     }
 
     .hero {
-      padding: 32px 0 24px;
+      padding: 32px 0 28px;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.2fr);
+      gap: 28px;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
       margin-bottom: 12px;
     }
 
     .hero p {
       color: #9ca3af;
       margin-bottom: 16px;
+      max-width: 40rem;
     }
 
     .badge {
-      display: inline-block;
-      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
       border-radius: 999px;
       background: rgba(34, 197, 94, 0.15);
       border: 1px solid rgba(34, 197, 94, 0.35);
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       margin-bottom: 10px;
+      color: #a7f3d0;
+    }
+
+    .hero-subline {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 16px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 10px;
     }
 
     .btn {
@@ -97,23 +125,23 @@
       justify-content: center;
       padding: 10px 18px;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       border: 1px solid transparent;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s, border-color 0.1s;
       white-space: nowrap;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
-      box-shadow: 0 10px 30px rgba(15, 118, 110, 0.5);
+      box-shadow: 0 14px 35px rgba(15, 118, 110, 0.55);
     }
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(15, 118, 110, 0.7);
+      box-shadow: 0 18px 45px rgba(15, 118, 110, 0.75);
     }
 
     .btn-outline {
@@ -123,25 +151,48 @@
     }
     .btn-outline:hover {
       background: #111827;
+      border-color: #6b7280;
+    }
+
+    .hero-footnote {
+      font-size: 0.8rem;
+      color: #6b7280;
     }
 
     .hero-card {
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.06), transparent 60%);
-      border-radius: 18px;
-      border: 1px solid #1f2937;
-      padding: 18px 16px;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 60%);
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      padding: 18px 18px 16px;
       font-size: 0.86rem;
       color: #9ca3af;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.9);
     }
 
     .hero-card h2 {
       font-size: 1rem;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       color: var(--text);
     }
 
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15,23,42,0.9);
+      color: #9ca3af;
+    }
+
     .section {
-      padding: 20px 0;
+      padding: 22px 0;
       border-top: 1px solid #111827;
       margin-top: 10px;
     }
@@ -151,6 +202,13 @@
       margin-bottom: 12px;
     }
 
+    .section-intro {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 14px;
+      max-width: 40rem;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -158,10 +216,10 @@
     }
 
     .card {
-      background: linear-gradient(135deg, #020617, #020617);
+      background: linear-gradient(140deg, #020617, #020617);
       border-radius: 16px;
       padding: 14px 14px 16px;
-      border: 1px solid #1f2937;
+      border: 1px solid var(--border-subtle);
       font-size: 0.9rem;
     }
 
@@ -173,6 +231,29 @@
     .muted {
       color: #9ca3af;
       font-size: 0.9rem;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .highlight-item {
+      font-size: 0.86rem;
+      color: #9ca3af;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .highlight-bullet {
+      margin-top: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
     }
 
     .contact-list {
@@ -195,14 +276,17 @@
       gap: 8px;
     }
 
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
     @media (max-width: 720px) {
       header {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
-      }
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -210,9 +294,12 @@
 <body>
   <div class="page">
     <header>
-      <div>
-        <div class="logo">Ktronics AB</div>
-        <div class="tagline">Electronics • Solar Energy • IT & Integration</div>
+      <div class="brand">
+        <img src="/assets/ktronics-logo.png" alt="Ktronics logo" class="logo-image" />
+        <div>
+          <div class="logo">Ktronics AB</div>
+          <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
+        </div>
       </div>
       <div class="tagline">
         Katrineholm, Sweden<br />
@@ -224,53 +311,135 @@
       <!-- HERO -->
       <section class="hero" id="top">
         <div>
-          <div class="badge">Technology & Energy Solutions</div>
-          <h1>Smart electronics and solar solutions for homes, companies and partners.</h1>
+          <div class="badge">Technology, Energy & Integration</div>
+          <h1>Power management, embedded systems and IT solutions</h1>
           <p>
-            Ktronics AB helps customers design, build and maintain practical technology:
-            solar and battery systems, small electronics projects and modern integration
-            and cloud solutions.
+            Ktronics AB delivers engineering and consulting services across power systems,
+            embedded development and modern IT platforms. We help organisations design,
+            integrate and operate reliable technical solutions from hardware to cloud.
+          </p>
+          <p class="hero-subline">
+            We work as an independent consulting partner across hardware, embedded systems and cloud,
+            helping organisations move from ideas and prototypes to stable, long-term operation.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Contact Ktronics AB</a>
             <a href="#services" class="btn btn-outline">View services</a>
+          </div>
+          <div class="hero-footnote">
+            Flexible cooperation • Sweden & international clients • Technical depth with business focus
           </div>
         </div>
 
         <aside class="hero-card">
           <h2>About Ktronics AB</h2>
           <p>
-            Ktronics AB is a small Swedish company founded by
+            Ktronics AB is an independent Swedish engineering and consulting company founded by
             <strong>Gayan Kandaudage (M.Sc. in Electronics, M.Sc. in Computer Science)</strong>.
-            We combine hands-on hardware experience with software and cloud expertise.
           </p>
+          <p>
+            We combine experience from energy systems, power electronics, embedded development and
+            cloud-native IT platforms. Our role is to help customers design solid architectures,
+            solve hard technical problems and make existing systems easier to operate.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Energy & battery systems</span>
+            <span class="pill">Power electronics & control</span>
+            <span class="pill">Embedded & hardware</span>
+            <span class="pill">IT, cloud & integration</span>
+          </div>
         </aside>
       </section>
 
       <!-- SERVICES -->
       <section class="section" id="services">
         <h2>What we do</h2>
+        <p class="section-intro">
+          We help customers solve real problems in the field, in the workshop and in the data centre.
+          Below are our main focus areas.
+        </p>
         <div class="grid">
           <div class="card">
-            <h3>Solar & Battery Solutions</h3>
+            <h3>Energy & battery solutions</h3>
             <p class="muted">
-              Design and advice for residential and small-business solar installations,
-              off-grid and hybrid systems, and battery storage optimization.
+              Design and consultancy for residential and small-business energy systems, including
+              solar PV, hybrid and off-grid installations, battery storage and system optimisation
+              for reliability, safety and efficiency.
             </p>
           </div>
           <div class="card">
-            <h3>Electronics & Repair</h3>
+            <h3>Power electronics & systems engineering</h3>
             <p class="muted">
-              Troubleshooting and repair of power electronics, inverters, chargers and
-              small electronic devices. Practical, component-level diagnostics.
+              Engineering support for inverters, chargers, power supplies and energy control systems.
+              System-level design, integration, fault analysis and performance optimisation.
             </p>
           </div>
           <div class="card">
-            <h3>Software, Cloud & Integration</h3>
+            <h3>Software, cloud & integration</h3>
             <p class="muted">
               Architecture and development for integrations, APIs and data platforms.
-              Experience with ERP, DevOps, observability and cloud-native systems.
+              Experience with ERP, DevOps, observability and cloud-native environments for
+              scalable, secure operations.
             </p>
+          </div>
+          <div class="card">
+            <h3>Embedded & hardware development</h3>
+            <p class="muted">
+              Consulting and development of embedded systems and electronics – from requirements and
+              hardware design to firmware, testing and integration with existing IT infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPERATIONS & CONSULTING -->
+      <section class="section" id="operations">
+        <h2>Operations & consulting</h2>
+        <p class="section-intro">
+          Beyond individual projects, Ktronics AB supports customers with ongoing IT and operations work.
+          We can help you stabilise existing systems, plan new platforms or act as a technical partner
+          when you need extra hands and brains.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>IT consulting & operations</h3>
+            <p class="muted">
+              System design, network architecture, security reviews and IT operations support.
+              We cover the full development life cycle – from concept and design to implementation,
+              deployment and long-term operations.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Embedded & hardware consulting</h3>
+            <p class="muted">
+              Electronic hardware and embedded consulting from requirements and schematics to
+              prototyping, testing and production preparation. Bridging electronics, firmware and
+              backend systems into complete solutions.
+            </p>
+          </div>
+          <div class="card">
+            <h3>IT & electronics products</h3>
+            <p class="muted">
+              Supply of selected IT and electronics products such as network equipment, inverters,
+              UPS solutions and embedded hardware, including microcontroller-based devices assembled
+              and delivered by Ktronics AB.
+            </p>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight-item">
+            <span class="highlight-bullet"></span>
+            <span>We can join your team temporarily as an extra architect, engineer or system owner.</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-bullet"></span>
+            <span>Used to working with both startups and established organisations with long-lived systems.</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-bullet"></span>
+            <span>We prefer simple, maintainable solutions over unnecessary complexity.</span>
           </div>
         </div>
       </section>
@@ -278,12 +447,12 @@
       <!-- CONTACT -->
       <section class="section" id="contact">
         <h2>Contact</h2>
-        <p class="muted">
-          The fastest way to reach us is by email. Please describe your need briefly
-          (solar, electronics, repair, software, etc.), and we will get back to you.
+        <p class="section-intro">
+          The fastest way to reach us is by email. Write a short description of what you need
+          (energy, electronics, embedded, software, operations, etc.) and we will get back to you.
         </p>
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:gcgayan@gmail.com">gcgayan@gmail.com</a></li>
+          <li><strong>Email:</strong> <a href="mailto:ktronicsdev@gmail.com">ktronicsdev@gmail.com</a></li>
           <li><strong>Phone:</strong> +46&nbsp;72&nbsp;181&nbsp;9572</li>
           <li><strong>Location:</strong> Katrineholm, Sweden</li>
           <li><strong>Company:</strong> Ktronics AB</li>
@@ -293,7 +462,6 @@
 
     <footer>
       <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
-      <span>Website hosted on GitHub Pages.</span>
     </footer>
   </div>
 
