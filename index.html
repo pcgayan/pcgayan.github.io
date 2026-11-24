@@ -319,6 +319,12 @@
     }
   
     body{min-height:100vh}
+    .dd{position:relative;display:inline-block}
+    .dd-menu{display:none;position:absolute;top:100%;left:0;z-index:20;min-width:19rem;padding:8px;background:#020617;border:1px solid var(--border-subtle);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.6)}
+    .dd-menu a{display:block;padding:7px 10px;border-radius:8px;border-bottom:0!important;white-space:nowrap}
+    .dd-menu a:hover{background:#0f172a;text-decoration:none}
+    .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
+    @media (hover:none),(max-width:700px){.dd-menu{display:none!important}}
     .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
@@ -332,7 +338,7 @@
         <div>
           <div class="logo">Ktronics AB</div>
           <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/services/">Services</a><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
+          <nav class="topnav" aria-label="Main"><a href="/" aria-current="page">Home</a><span class="dd"><a href="/services/">Services</a><span class="dd-menu"><a href="/services/energy-battery-solutions/">Energy &amp; battery solutions</a><a href="/services/power-electronics/">Power electronics &amp; systems engineering</a><a href="/services/embedded-hardware/">Embedded &amp; hardware development</a><a href="/services/software-cloud-integration/">Software, cloud &amp; integration</a><a href="/services/it-consulting-operations/">IT consulting &amp; operations</a><a href="/services/it-electronics-products/">IT &amp; electronics products</a></span></span><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
         </div>
       </div>
       <div class="tagline">
