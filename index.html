@@ -318,7 +318,7 @@
       }
     }
   
-    .topnav{display:flex;gap:18px;margin-top:6px;font-size:.9rem}
+    .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
     </style>
@@ -331,7 +331,7 @@
         <div>
           <div class="logo">Ktronics AB</div>
           <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
+          <nav class="topnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/services/">Services</a><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
         </div>
       </div>
       <div class="tagline">
@@ -386,102 +386,23 @@
 
       <!-- SERVICES -->
       <section class="section" id="services">
-        <h2>What we do</h2>
-        <p class="section-intro">
-          We help customers solve real problems in the field, in the workshop and in the data centre.
-          Below are our main focus areas.
-        </p>
+        <h2>Services</h2>
         <div class="grid">
-          <div class="card">
-            <h3>Energy & battery solutions</h3>
-            <p class="muted">
-              Design and consultancy for residential and small-business energy systems, including
-              solar PV, hybrid and off-grid installations, battery storage and system optimisation
-              for reliability, safety and efficiency.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Power electronics & systems engineering</h3>
-            <p class="muted">
-              Engineering support for inverters, chargers, power supplies and energy control systems.
-              System-level design, integration, fault analysis and performance optimisation.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Software, cloud & integration</h3>
-            <p class="muted">
-              Architecture and development for integrations, APIs and data platforms.
-              Experience with ERP, DevOps, observability and cloud-native environments for
-              scalable, secure operations.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Embedded & hardware development</h3>
-            <p class="muted">
-              Consulting and development of embedded systems and electronics – from requirements and
-              hardware design to firmware, testing and integration with existing IT infrastructure.
-            </p>
-          </div>
+          <a class="card" href="/services/energy-battery-solutions/" style="text-decoration:none;color:inherit"><h3>Energy &amp; battery solutions</h3><p class="muted">Design and consultancy for solar PV, hybrid and off-grid systems and battery storage.</p></a>
+          <a class="card" href="/services/power-electronics/" style="text-decoration:none;color:inherit"><h3>Power electronics &amp; systems engineering</h3><p class="muted">Engineering support for inverters, chargers, power supplies and energy control systems.</p></a>
+          <a class="card" href="/services/embedded-hardware/" style="text-decoration:none;color:inherit"><h3>Embedded &amp; hardware development</h3><p class="muted">Embedded systems and electronics, from requirements and schematics to firmware, testing and production.</p></a>
+          <a class="card" href="/services/software-cloud-integration/" style="text-decoration:none;color:inherit"><h3>Software, cloud &amp; integration</h3><p class="muted">Architecture and development for integrations, APIs and data platforms.</p></a>
+          <a class="card" href="/services/it-consulting-operations/" style="text-decoration:none;color:inherit"><h3>IT consulting &amp; operations</h3><p class="muted">System design, network architecture, security reviews and IT operations support.</p></a>
+          <a class="card" href="/services/it-electronics-products/" style="text-decoration:none;color:inherit"><h3>IT &amp; electronics products</h3><p class="muted">Selected network equipment, inverters, UPS solutions and embedded hardware.</p></a>
         </div>
-      </section>
-
-      <!-- OPERATIONS & CONSULTING -->
-      <section class="section" id="operations">
-        <h2>Operations & consulting</h2>
-        <p class="section-intro">
-          Beyond individual projects, Ktronics AB supports customers with ongoing IT and operations work.
-          We can help you stabilise existing systems, plan new platforms or act as a technical partner
-          when you need extra hands and brains.
-        </p>
-
-        <div class="grid">
-          <div class="card">
-            <h3>IT consulting & operations</h3>
-            <p class="muted">
-              System design, network architecture, security reviews and IT operations support.
-              We cover the full development life cycle – from concept and design to implementation,
-              deployment and long-term operations.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Embedded & hardware consulting</h3>
-            <p class="muted">
-              Electronic hardware and embedded consulting from requirements and schematics to
-              prototyping, testing and production preparation. Bridging electronics, firmware and
-              backend systems into complete solutions.
-            </p>
-          </div>
-          <div class="card">
-            <h3>IT & electronics products</h3>
-            <p class="muted">
-              Supply of selected IT and electronics products such as network equipment, inverters,
-              UPS solutions and embedded hardware, including microcontroller-based devices assembled
-              and delivered by Ktronics AB.
-            </p>
-          </div>
-        </div>
-
-        <div class="highlights">
-          <div class="highlight-item">
-            <span class="highlight-bullet"></span>
-            <span>We can join your team temporarily as an extra architect, engineer or system owner.</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-bullet"></span>
-            <span>Used to working with both startups and established organisations with long-lived systems.</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-bullet"></span>
-            <span>We prefer simple, maintainable solutions over unnecessary complexity.</span>
-          </div>
-        </div>
+        <p><a href="/services/">All services</a></p>
       </section>
 
       <!-- EMAIL CTA -->
       <div class="email-cta">
         <h2>Get In Touch</h2>
         <p>Have a question or want to discuss your next project? We're here to help.</p>
-        <a href="mailto:ktronicsdev@gmail.com" class="btn btn-primary">Email Us - ktronicsdev@gmail.com</a>
+        <a href="/contact/" class="btn btn-primary">Contact us</a>
       </div>
 
       </main>

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ktronics.se/</loc></url>
-  <url><loc>https://ktronics.se/about/</loc></url>
+  <url><loc>https://ktronics.se/services/</loc></url>
+  <url><loc>https://ktronics.se/services/energy-battery-solutions/</loc></url>
+  <url><loc>https://ktronics.se/services/power-electronics/</loc></url>
+  <url><loc>https://ktronics.se/services/embedded-hardware/</loc></url>
+  <url><loc>https://ktronics.se/services/software-cloud-integration/</loc></url>
+  <url><loc>https://ktronics.se/services/it-consulting-operations/</loc></url>
+  <url><loc>https://ktronics.se/services/it-electronics-products/</loc></url>
   <url><loc>https://ktronics.se/brands/</loc></url>
+  <url><loc>https://ktronics.se/about/</loc></url>
   <url><loc>https://ktronics.se/contact/</loc></url>
 </urlset>
