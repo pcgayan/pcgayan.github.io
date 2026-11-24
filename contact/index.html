@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact us – Ktronics AB</title>
+  <title data-en="Contact us – Ktronics AB" data-sv="Kontakt – Ktronics AB">Kontakt – Ktronics AB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Ktronics AB in Katrineholm, Sweden: email ktronicsdev@gmail.com or phone +46 72 181 95 72." />
+  <meta name="description" content="Kontakta Ktronics AB i Katrineholm: e-post ktronicsdev@gmail.com eller telefon +46 72 181 95 72." />
   <link rel="canonical" href="https://ktronics.se/contact/" />
   <meta name="author" content="Ktronics AB">
   <style>
@@ -316,7 +316,7 @@
         gap: 4px;
       }
     }
-  </style>
+    </style>
   <style>
     body{min-height:100vh}
     .dd{position:relative;display:inline-block}
@@ -324,10 +324,16 @@
     .dd-menu a{display:block;padding:7px 10px;border-radius:8px;border-bottom:0!important;white-space:nowrap}
     .dd-menu a:hover{background:#0f172a;text-decoration:none}
     .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
-    @media (hover:none),(max-width:700px){.dd-menu{display:none!important}}
+    @media (hover:none) and (min-width:701px){.dd-menu{display:none!important}}
     .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
+    .lang{display:inline-flex;gap:6px;margin-left:6px}
+    .lang button{font:inherit;font-size:.75rem;background:none;color:var(--muted,#94a3b8);border:1px solid var(--border-subtle);border-radius:999px;padding:2px 10px;cursor:pointer}
+    .lang button[aria-pressed="true"]{color:var(--text);border-color:var(--primary)}
+    .menu-btn{display:none;background:none;border:1px solid var(--border-subtle);border-radius:8px;padding:8px 10px;cursor:pointer;margin-top:6px}
+    .menu-btn span{display:block;width:22px;height:2px;margin:4px 0;background:var(--text)}
+    @media (max-width:700px){.menu-btn{display:inline-block}.topnav{display:none;flex-direction:column;gap:0;margin-top:8px}.topnav.open{display:flex}.topnav>a,.topnav>.dd>a{display:block;padding:10px 0;border-bottom:1px solid var(--border-subtle)}.dd{display:block}.dd-menu{display:block!important;position:static;border:0;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0}.dd-menu a{white-space:normal}.lang{padding-top:12px;margin-left:0}}
   </style>
 </head>
 <body>
@@ -337,43 +343,38 @@
         <img src="/assets/Ktronics.png" alt="Ktronics logo" class="logo-image" />
         <div>
           <div class="logo">Ktronics AB</div>
-          <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/">Home</a><span class="dd"><a href="/services/">Services</a><span class="dd-menu"><a href="/services/energy-battery-solutions/">Energy &amp; battery solutions</a><a href="/services/power-electronics/">Power electronics &amp; systems engineering</a><a href="/services/embedded-hardware/">Embedded &amp; hardware development</a><a href="/services/software-cloud-integration/">Software, cloud &amp; integration</a><a href="/services/it-consulting-operations/">IT consulting &amp; operations</a><a href="/services/it-electronics-products/">IT &amp; electronics products</a></span></span><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/" aria-current="page">Contact us</a></nav>
+          <div class="tagline" data-en="Electronics • Energy Systems • IT & Integration" data-sv="Elektronik • Energisystem • IT & integration">Elektronik • Energisystem • IT & integration</div>
+          <button class="menu-btn" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav class="topnav" id="nav" aria-label="Main"><a href="/" data-en="Home" data-sv="Hem">Hem</a><span class="dd"><a href="/services/" data-en="Services" data-sv="Tjänster">Tjänster</a><span class="dd-menu"><a href="/services/energy-battery-solutions/" data-en="Energy &amp; battery solutions" data-sv="Energi- och batterilösningar">Energi- och batterilösningar</a><a href="/services/power-electronics/" data-en="Power electronics &amp; systems engineering" data-sv="Kraftelektronik &amp; systemteknik">Kraftelektronik &amp; systemteknik</a><a href="/services/embedded-hardware/" data-en="Embedded &amp; hardware development" data-sv="Inbyggd &amp; hårdvaruutveckling">Inbyggd &amp; hårdvaruutveckling</a><a href="/services/software-cloud-integration/" data-en="Software, cloud &amp; integration" data-sv="Mjukvara, moln &amp; integration">Mjukvara, moln &amp; integration</a><a href="/services/it-consulting-operations/" data-en="IT consulting &amp; operations" data-sv="IT-konsulting &amp; drift">IT-konsulting &amp; drift</a><a href="/services/it-electronics-products/" data-en="IT &amp; electronics products" data-sv="IT- &amp; elektronikprodukter">IT- &amp; elektronikprodukter</a></span></span><a href="/brands/" data-en="Brands" data-sv="Varumärken">Varumärken</a><a href="/about/" data-en="About us" data-sv="Om oss">Om oss</a><a href="/contact/" aria-current="page" data-en="Contact us" data-sv="Kontakt">Kontakt</a><span class="lang" role="group" aria-label="Language"><button type="button" id="b-en" aria-pressed="false">EN</button><button type="button" id="b-sv" aria-pressed="true">SV</button></span></nav>
         </div>
       </div>
-      <div class="tagline">
-        Katrineholm, Sweden<br />
-        Org.nr: 559469-3508
-      </div>
+      <div class="tagline" data-en="Katrineholm, Sweden<br /> Org.nr: 559469-3508" data-sv="Katrineholm, Sverige<br /> Org.nr: 559469-3508">Katrineholm, Sverige<br /> Org.nr: 559469-3508</div>
     </header>
 
     <main>
       <section class="section" id="contact">
-        <h1>Contact us</h1>
-        <p class="section-intro">
-          The fastest way to reach us is by email. Write a short description of what you need
-          (energy, electronics, embedded, software, operations, etc.) and we will get back to you.
-        </p>
+        <h1 data-en="Contact us" data-sv="Kontakt">Kontakt</h1>
+        <p class="section-intro" data-en="The fastest way to reach us is by email. Write a short description of what you need (energy, electronics, embedded, software, operations, etc.) and we will get back to you." data-sv="Snabbaste sättet att nå oss är via e-post. Skriv en kort beskrivning av vad du behöver (energi, elektronik, inbyggt, mjukvara, drift m.m.) så återkommer vi.">Snabbaste sättet att nå oss är via e-post. Skriv en kort beskrivning av vad du behöver (energi, elektronik, inbyggt, mjukvara, drift m.m.) så återkommer vi.</p>
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:ktronicsdev@gmail.com">ktronicsdev@gmail.com</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+46721819572">+46&nbsp;72&nbsp;181&nbsp;9572</a></li>
-          <li><strong>Location:</strong> Katrineholm, Sweden</li>
-          <li><strong>Company:</strong> Ktronics AB, org.nr 559469-3508</li>
+          <li data-en="<strong>Email:</strong> <a href=&quot;mailto:ktronicsdev@gmail.com&quot;>ktronicsdev@gmail.com</a>" data-sv="<strong>E-post:</strong> <a href=&quot;mailto:ktronicsdev@gmail.com&quot;>ktronicsdev@gmail.com</a>"><strong>E-post:</strong> <a href="mailto:ktronicsdev@gmail.com">ktronicsdev@gmail.com</a></li>
+          <li data-en="<strong>Phone:</strong> <a href=&quot;tel:+46721819572&quot;>+46&nbsp;72&nbsp;181&nbsp;9572</a>" data-sv="<strong>Telefon:</strong> <a href=&quot;tel:+46721819572&quot;>+46&nbsp;72&nbsp;181&nbsp;9572</a>"><strong>Telefon:</strong> <a href="tel:+46721819572">+46&nbsp;72&nbsp;181&nbsp;9572</a></li>
+          <li data-en="<strong>Location:</strong> Katrineholm, Sweden" data-sv="<strong>Plats:</strong> Katrineholm, Sverige"><strong>Plats:</strong> Katrineholm, Sverige</li>
+          <li data-en="<strong>Company:</strong> Ktronics AB, org.nr 559469-3508" data-sv="<strong>Företag:</strong> Ktronics AB, org.nr 559469-3508"><strong>Företag:</strong> Ktronics AB, org.nr 559469-3508</li>
         </ul>
-        <p><a href="/about/">About us</a></p>
+        <p data-en="<a href=&quot;/about/&quot;>About us</a>" data-sv="<a href=&quot;/about/&quot;>Om oss</a>"><a href="/about/">Om oss</a></p>
       </section>
 
       <div class="email-cta">
-        <h2>Get In Touch</h2>
-        <p>Have a question or want to discuss your next project? We're here to help.</p>
-        <a href="https://wa.me/46721819572?text=Hello%20Ktronics%20AB" class="btn btn-primary" rel="noopener">WhatsApp us</a>
+        <h2 data-en="Get In Touch" data-sv="Hör av dig">Hör av dig</h2>
+        <p data-en="Have a question or want to discuss your next project? We're here to help." data-sv="Har du en fråga eller vill diskutera ditt nästa projekt? Vi hjälper dig gärna.">Har du en fråga eller vill diskutera ditt nästa projekt? Vi hjälper dig gärna.</p>
+        <a href="https://wa.me/46721819572?text=Hello%20Ktronics%20AB" class="btn btn-primary" rel="noopener" data-en="WhatsApp us" data-sv="Skriv till oss på WhatsApp">Skriv till oss på WhatsApp</a>
       </div>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
+      <span>© <span id="year"></span> Ktronics AB. <span data-en="All rights reserved." data-sv="Alla rättigheter förbehållna.">Alla rättigheter förbehållna.</span></span>
     </footer>
   </div>
+  <script src="/assets/site.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact Ktronics AB","url":"https://ktronics.se/contact/","about":{"@type":"Organization","name":"Ktronics AB","url":"https://ktronics.se/","telephone":"+46721819572","email":"ktronicsdev@gmail.com","vatID":"SE559469350801","address":{"@type":"PostalAddress","addressLocality":"Katrineholm","addressCountry":"SE"}}}</script>
 </body>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Ktronics AB – Embedded, Energy & IT Solutions</title>
+  <title data-en="Ktronics AB – Embedded, Energy & IT Solutions" data-sv="Ktronics AB – Inbyggda system, energi &amp; IT-lösningar">Ktronics AB – Inbyggda system, energi &amp; IT-lösningar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ktronics AB – energy systems, electronics and IT consulting based in Katrineholm, Sweden." />
+  <meta name="description" content="Ktronics AB – energisystem, elektronik och IT-konsulting i Katrineholm." />
   <meta name="keywords" content="Ktronics AB, power management Sweden, embedded systems Sweden, IT consulting Katrineholm, energy systems Sweden">
   <meta name="author" content="Ktronics AB">
   <link rel="canonical" href="https://ktronics.se/" />
@@ -324,11 +324,17 @@
     .dd-menu a{display:block;padding:7px 10px;border-radius:8px;border-bottom:0!important;white-space:nowrap}
     .dd-menu a:hover{background:#0f172a;text-decoration:none}
     .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
-    @media (hover:none),(max-width:700px){.dd-menu{display:none!important}}
+    @media (hover:none) and (min-width:701px){.dd-menu{display:none!important}}
     .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
-    </style>
+    .lang{display:inline-flex;gap:6px;margin-left:6px}
+    .lang button{font:inherit;font-size:.75rem;background:none;color:var(--muted,#94a3b8);border:1px solid var(--border-subtle);border-radius:999px;padding:2px 10px;cursor:pointer}
+    .lang button[aria-pressed="true"]{color:var(--text);border-color:var(--primary)}
+    .menu-btn{display:none;background:none;border:1px solid var(--border-subtle);border-radius:8px;padding:8px 10px;cursor:pointer;margin-top:6px}
+    .menu-btn span{display:block;width:22px;height:2px;margin:4px 0;background:var(--text)}
+    @media (max-width:700px){.menu-btn{display:inline-block}.topnav{display:none;flex-direction:column;gap:0;margin-top:8px}.topnav.open{display:flex}.topnav>a,.topnav>.dd>a{display:block;padding:10px 0;border-bottom:1px solid var(--border-subtle)}.dd{display:block}.dd-menu{display:block!important;position:static;border:0;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0}.dd-menu a{white-space:normal}.lang{padding-top:12px;margin-left:0}}
+      </style>
 </head>
 <body>
   <div class="page">
@@ -337,56 +343,37 @@
         <img src="assets/Ktronics.png" alt="Ktronics logo" class="logo-image" />
         <div>
           <div class="logo">Ktronics AB</div>
-          <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/" aria-current="page">Home</a><span class="dd"><a href="/services/">Services</a><span class="dd-menu"><a href="/services/energy-battery-solutions/">Energy &amp; battery solutions</a><a href="/services/power-electronics/">Power electronics &amp; systems engineering</a><a href="/services/embedded-hardware/">Embedded &amp; hardware development</a><a href="/services/software-cloud-integration/">Software, cloud &amp; integration</a><a href="/services/it-consulting-operations/">IT consulting &amp; operations</a><a href="/services/it-electronics-products/">IT &amp; electronics products</a></span></span><a href="/brands/">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
+          <div class="tagline" data-en="Electronics • Energy Systems • IT & Integration" data-sv="Elektronik • Energisystem • IT & integration">Elektronik • Energisystem • IT & integration</div>
+          <button class="menu-btn" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav class="topnav" id="nav" aria-label="Main"><a href="/" aria-current="page" data-en="Home" data-sv="Hem">Hem</a><span class="dd"><a href="/services/" data-en="Services" data-sv="Tjänster">Tjänster</a><span class="dd-menu"><a href="/services/energy-battery-solutions/" data-en="Energy &amp; battery solutions" data-sv="Energi- och batterilösningar">Energi- och batterilösningar</a><a href="/services/power-electronics/" data-en="Power electronics &amp; systems engineering" data-sv="Kraftelektronik &amp; systemteknik">Kraftelektronik &amp; systemteknik</a><a href="/services/embedded-hardware/" data-en="Embedded &amp; hardware development" data-sv="Inbyggd &amp; hårdvaruutveckling">Inbyggd &amp; hårdvaruutveckling</a><a href="/services/software-cloud-integration/" data-en="Software, cloud &amp; integration" data-sv="Mjukvara, moln &amp; integration">Mjukvara, moln &amp; integration</a><a href="/services/it-consulting-operations/" data-en="IT consulting &amp; operations" data-sv="IT-konsulting &amp; drift">IT-konsulting &amp; drift</a><a href="/services/it-electronics-products/" data-en="IT &amp; electronics products" data-sv="IT- &amp; elektronikprodukter">IT- &amp; elektronikprodukter</a></span></span><a href="/brands/" data-en="Brands" data-sv="Varumärken">Varumärken</a><a href="/about/" data-en="About us" data-sv="Om oss">Om oss</a><a href="/contact/" data-en="Contact us" data-sv="Kontakt">Kontakt</a><span class="lang" role="group" aria-label="Language"><button type="button" id="b-en" aria-pressed="false">EN</button><button type="button" id="b-sv" aria-pressed="true">SV</button></span></nav>
         </div>
       </div>
-      <div class="tagline">
-        Katrineholm, Sweden<br />
-        Org.nr: 559469-3508
-      </div>
+      <div class="tagline" data-en="Katrineholm, Sweden<br /> Org.nr: 559469-3508" data-sv="Katrineholm, Sverige<br /> Org.nr: 559469-3508">Katrineholm, Sverige<br /> Org.nr: 559469-3508</div>
     </header>
 
     <main>
       <!-- HERO -->
       <section class="hero" id="top">
         <div>
-          <div class="badge">Technology, Energy & Integration</div>
-          <h1>Power management, embedded systems and IT solutions</h1>
-          <p>
-            Ktronics AB delivers engineering and consulting services across power systems,
-            embedded development and modern IT platforms. We help organisations design,
-            integrate and operate reliable technical solutions from hardware to cloud.
-          </p>
-          <p class="hero-subline">
-            We work as an independent consulting partner across hardware, embedded systems and cloud,
-            helping organisations move from ideas and prototypes to stable, long-term operation.
-          </p>
+          <div class="badge" data-en="Technology, Energy &amp; Integration" data-sv="Teknik, energi &amp; integration">Teknik, energi &amp; integration</div>
+          <h1 data-en="Power management, embedded systems and IT solutions" data-sv="Energihantering, inbyggda system och IT-lösningar">Energihantering, inbyggda system och IT-lösningar</h1>
+          <p data-en="Ktronics AB delivers engineering and consulting services across power systems, embedded development and modern IT platforms. We help organisations design, integrate and operate reliable technical solutions from hardware to cloud." data-sv="Ktronics AB levererar ingenjörs- och konsulttjänster inom kraftsystem, inbyggd utveckling och moderna IT-plattformar. Vi hjälper organisationer att utforma, integrera och driva pålitliga tekniska lösningar, från hårdvara till moln.">Ktronics AB levererar ingenjörs- och konsulttjänster inom kraftsystem, inbyggd utveckling och moderna IT-plattformar. Vi hjälper organisationer att utforma, integrera och driva pålitliga tekniska lösningar, från hårdvara till moln.</p>
+          <p class="hero-subline" data-en="We work as an independent consulting partner across hardware, embedded systems and cloud, helping organisations move from ideas and prototypes to stable, long-term operation." data-sv="Vi arbetar som oberoende konsultpartner inom hårdvara, inbyggda system och moln och hjälper organisationer från idé och prototyp till stabil, långsiktig drift.">Vi arbetar som oberoende konsultpartner inom hårdvara, inbyggda system och moln och hjälper organisationer från idé och prototyp till stabil, långsiktig drift.</p>
           <div class="hero-actions">
-            <a href="/contact/" class="btn btn-primary">Contact Ktronics AB</a>
-            <a href="#services" class="btn btn-outline">View services</a>
+            <a href="/contact/" class="btn btn-primary" data-en="Contact Ktronics AB" data-sv="Kontakta Ktronics AB">Kontakta Ktronics AB</a>
+            <a href="#services" class="btn btn-outline" data-en="View services" data-sv="Se tjänster">Se tjänster</a>
           </div>
-          <div class="hero-footnote">
-            Flexible cooperation • Sweden & international clients • Technical depth with business focus
-          </div>
+          <div class="hero-footnote" data-en="Flexible cooperation • Sweden & international clients • Technical depth with business focus" data-sv="Flexibelt samarbete • Kunder i Sverige och utomlands • Teknisk spetskompetens med affärsfokus">Flexibelt samarbete • Kunder i Sverige och utomlands • Teknisk spetskompetens med affärsfokus</div>
         </div>
 
         <aside class="hero-card">
-          <h2>About Ktronics AB</h2>
-          <p>
-            Ktronics AB is an independent Swedish engineering and consulting company founded by
-            <strong>Gayan Kandaudage (M.Sc. in Electronics, M.Sc. in Computer Science)</strong>.
-          </p>
-          <p>
-            We combine experience from energy systems, power electronics, embedded development and
-            cloud-native IT platforms. Our role is to help customers design solid architectures,
-            solve hard technical problems and make existing systems easier to operate.
-          </p>
+          <h2 data-en="About Ktronics AB" data-sv="Om Ktronics AB">Om Ktronics AB</h2>
+          <p data-en="Ktronics AB is an independent Swedish engineering and consulting company founded by <strong>Gayan Kandaudage (M.Sc. in Electronics, M.Sc. in Computer Science)</strong>." data-sv="Ktronics AB är ett oberoende svenskt ingenjörs- och konsultföretag grundat av <strong>Gayan Kandaudage (civilingenjör i elektronik, civilingenjör i datavetenskap)</strong>.">Ktronics AB är ett oberoende svenskt ingenjörs- och konsultföretag grundat av <strong>Gayan Kandaudage (civilingenjör i elektronik, civilingenjör i datavetenskap)</strong>.</p>
+          <p data-en="We combine experience from energy systems, power electronics, embedded development and cloud-native IT platforms. Our role is to help customers design solid architectures, solve hard technical problems and make existing systems easier to operate." data-sv="Vi kombinerar erfarenhet från energisystem, kraftelektronik, inbyggd utveckling och molnbaserade IT-plattformar. Vår roll är att hjälpa kunder att ta fram robusta arkitekturer, lösa svåra tekniska problem och göra befintliga system enklare att driva.">Vi kombinerar erfarenhet från energisystem, kraftelektronik, inbyggd utveckling och molnbaserade IT-plattformar. Vår roll är att hjälpa kunder att ta fram robusta arkitekturer, lösa svåra tekniska problem och göra befintliga system enklare att driva.</p>
           <div class="pill-row">
-            <span class="pill">Energy & battery systems</span>
-            <span class="pill">Power electronics & control</span>
-            <span class="pill">Embedded & hardware</span>
-            <span class="pill">IT, cloud & integration</span>
+            <span class="pill" data-en="Energy & battery systems" data-sv="Energi- och batterisystem">Energi- och batterisystem</span>
+            <span class="pill" data-en="Power electronics & control" data-sv="Kraftelektronik & styrning">Kraftelektronik & styrning</span>
+            <span class="pill" data-en="Embedded & hardware" data-sv="Inbyggt & hårdvara">Inbyggt & hårdvara</span>
+            <span class="pill" data-en="IT, cloud & integration" data-sv="IT, moln & integration">IT, moln & integration</span>
           </div>
         </aside>
       </section>
@@ -394,10 +381,11 @@
       </main>
 
     <footer>
-      <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
+      <span>© <span id="year"></span> Ktronics AB. <span data-en="All rights reserved." data-sv="Alla rättigheter förbehållna.">Alla rättigheter förbehållna.</span></span>
     </footer>
   </div>
 
+  <script src="/assets/site.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

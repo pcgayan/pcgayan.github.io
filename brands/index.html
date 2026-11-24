@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Brands – Ktronics AB</title>
+  <title data-en="Brands – Ktronics AB" data-sv="Varumärken – Ktronics AB">Varumärken – Ktronics AB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Brands of Ktronics AB: Annitia A., the art brand of the fine artist Annitia Abeysuriya." />
+  <meta name="description" content="Ktronics ABs varumärken: Annitia A., konstvarumärket för konstnären Annitia Abeysuriya." />
   <link rel="canonical" href="https://ktronics.se/brands/" />
   <meta name="author" content="Ktronics AB">
   <style>
@@ -316,7 +316,7 @@
         gap: 4px;
       }
     }
-  </style>
+    </style>
   <style>
     body{min-height:100vh}
     .dd{position:relative;display:inline-block}
@@ -324,10 +324,16 @@
     .dd-menu a{display:block;padding:7px 10px;border-radius:8px;border-bottom:0!important;white-space:nowrap}
     .dd-menu a:hover{background:#0f172a;text-decoration:none}
     .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
-    @media (hover:none),(max-width:700px){.dd-menu{display:none!important}}
+    @media (hover:none) and (min-width:701px){.dd-menu{display:none!important}}
     .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
+    .lang{display:inline-flex;gap:6px;margin-left:6px}
+    .lang button{font:inherit;font-size:.75rem;background:none;color:var(--muted,#94a3b8);border:1px solid var(--border-subtle);border-radius:999px;padding:2px 10px;cursor:pointer}
+    .lang button[aria-pressed="true"]{color:var(--text);border-color:var(--primary)}
+    .menu-btn{display:none;background:none;border:1px solid var(--border-subtle);border-radius:8px;padding:8px 10px;cursor:pointer;margin-top:6px}
+    .menu-btn span{display:block;width:22px;height:2px;margin:4px 0;background:var(--text)}
+    @media (max-width:700px){.menu-btn{display:inline-block}.topnav{display:none;flex-direction:column;gap:0;margin-top:8px}.topnav.open{display:flex}.topnav>a,.topnav>.dd>a{display:block;padding:10px 0;border-bottom:1px solid var(--border-subtle)}.dd{display:block}.dd-menu{display:block!important;position:static;border:0;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0}.dd-menu a{white-space:normal}.lang{padding-top:12px;margin-left:0}}
   </style>
 </head>
 <body>
@@ -337,32 +343,26 @@
         <img src="/assets/Ktronics.png" alt="Ktronics logo" class="logo-image" />
         <div>
           <div class="logo">Ktronics AB</div>
-          <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/">Home</a><span class="dd"><a href="/services/">Services</a><span class="dd-menu"><a href="/services/energy-battery-solutions/">Energy &amp; battery solutions</a><a href="/services/power-electronics/">Power electronics &amp; systems engineering</a><a href="/services/embedded-hardware/">Embedded &amp; hardware development</a><a href="/services/software-cloud-integration/">Software, cloud &amp; integration</a><a href="/services/it-consulting-operations/">IT consulting &amp; operations</a><a href="/services/it-electronics-products/">IT &amp; electronics products</a></span></span><a href="/brands/" aria-current="page">Brands</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></nav>
+          <div class="tagline" data-en="Electronics • Energy Systems • IT & Integration" data-sv="Elektronik • Energisystem • IT & integration">Elektronik • Energisystem • IT & integration</div>
+          <button class="menu-btn" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav class="topnav" id="nav" aria-label="Main"><a href="/" data-en="Home" data-sv="Hem">Hem</a><span class="dd"><a href="/services/" data-en="Services" data-sv="Tjänster">Tjänster</a><span class="dd-menu"><a href="/services/energy-battery-solutions/" data-en="Energy &amp; battery solutions" data-sv="Energi- och batterilösningar">Energi- och batterilösningar</a><a href="/services/power-electronics/" data-en="Power electronics &amp; systems engineering" data-sv="Kraftelektronik &amp; systemteknik">Kraftelektronik &amp; systemteknik</a><a href="/services/embedded-hardware/" data-en="Embedded &amp; hardware development" data-sv="Inbyggd &amp; hårdvaruutveckling">Inbyggd &amp; hårdvaruutveckling</a><a href="/services/software-cloud-integration/" data-en="Software, cloud &amp; integration" data-sv="Mjukvara, moln &amp; integration">Mjukvara, moln &amp; integration</a><a href="/services/it-consulting-operations/" data-en="IT consulting &amp; operations" data-sv="IT-konsulting &amp; drift">IT-konsulting &amp; drift</a><a href="/services/it-electronics-products/" data-en="IT &amp; electronics products" data-sv="IT- &amp; elektronikprodukter">IT- &amp; elektronikprodukter</a></span></span><a href="/brands/" aria-current="page" data-en="Brands" data-sv="Varumärken">Varumärken</a><a href="/about/" data-en="About us" data-sv="Om oss">Om oss</a><a href="/contact/" data-en="Contact us" data-sv="Kontakt">Kontakt</a><span class="lang" role="group" aria-label="Language"><button type="button" id="b-en" aria-pressed="false">EN</button><button type="button" id="b-sv" aria-pressed="true">SV</button></span></nav>
         </div>
       </div>
-      <div class="tagline">
-        Katrineholm, Sweden<br />
-        Org.nr: 559469-3508
-      </div>
+      <div class="tagline" data-en="Katrineholm, Sweden<br /> Org.nr: 559469-3508" data-sv="Katrineholm, Sverige<br /> Org.nr: 559469-3508">Katrineholm, Sverige<br /> Org.nr: 559469-3508</div>
     </header>
 
     <main>
       <section class="section" id="brands">
-        <h1>Brands</h1>
-        <p class="section-intro">
-          Ktronics AB also runs the art brand <strong><a href="https://annitia-a.se/">Annitia A.</a></strong>
-          (also written Annitia-A), the signature of the fine artist Annitia Abeysuriya: original art,
-          calligraphy and hand-made pieces, each one signed. Website: <a href="https://annitia-a.se/">annitia-a.se</a>.
-        </p>
-        <p><a href="/about/">About us</a> · <a href="/contact/">Contact us</a></p>
+        <h1 data-en="Brands" data-sv="Varumärken">Varumärken</h1>
+        <p class="section-intro" data-en="Ktronics AB also runs the art brand <strong><a href=&quot;https://annitia-a.se/&quot;>Annitia A.</a></strong> (also written Annitia-A), the signature of the fine artist Annitia Abeysuriya: original art, calligraphy and hand-made pieces, each one signed. Website: <a href=&quot;https://annitia-a.se/&quot;>annitia-a.se</a>." data-sv="Ktronics AB driver också konstvarumärket <strong><a href=&quot;https://annitia-a.se/&quot;>Annitia A.</a></strong> (även skrivet Annitia-A), konstnären Annitia Abeysuriyas signatur: originalkonst, kalligrafi och handgjorda verk, alla signerade. Webbplats: <a href=&quot;https://annitia-a.se/&quot;>annitia-a.se</a>.">Ktronics AB driver också konstvarumärket <strong><a href="https://annitia-a.se/">Annitia A.</a></strong> (även skrivet Annitia-A), konstnären Annitia Abeysuriyas signatur: originalkonst, kalligrafi och handgjorda verk, alla signerade. Webbplats: <a href="https://annitia-a.se/">annitia-a.se</a>.</p>
+        <p data-en="<a href=&quot;/about/&quot;>About us</a> · <a href=&quot;/contact/&quot;>Contact us</a>" data-sv="<a href=&quot;/about/&quot;>Om oss</a> · <a href=&quot;/contact/&quot;>Kontakt</a>"><a href="/about/">Om oss</a> · <a href="/contact/">Kontakt</a></p>
       </section>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
+      <span>© <span id="year"></span> Ktronics AB. <span data-en="All rights reserved." data-sv="Alla rättigheter förbehållna.">Alla rättigheter förbehållna.</span></span>
     </footer>
   </div>
+  <script src="/assets/site.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Brands of Ktronics AB","url":"https://ktronics.se/brands/","about":{"@type":"Organization","name":"Ktronics AB","url":"https://ktronics.se/","telephone":"+46721819572","email":"ktronicsdev@gmail.com","vatID":"SE559469350801","address":{"@type":"PostalAddress","addressLocality":"Katrineholm","addressCountry":"SE"}}}</script>
 </body>

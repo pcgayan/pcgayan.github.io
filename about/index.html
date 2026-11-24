@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>About us – Ktronics AB</title>
+  <title data-en="About us – Ktronics AB" data-sv="Om oss – Ktronics AB">Om oss – Ktronics AB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About Ktronics AB: an independent Swedish engineering and consulting company in Katrineholm: energy systems, power electronics, embedded and IT." />
+  <meta name="description" content="Om Ktronics AB: ett oberoende svenskt ingenjörs- och konsultföretag i Katrineholm: energisystem, kraftelektronik, inbyggt och IT." />
   <link rel="canonical" href="https://ktronics.se/about/" />
   <meta name="author" content="Ktronics AB">
   <style>
@@ -316,7 +316,7 @@
         gap: 4px;
       }
     }
-  </style>
+    </style>
   <style>
     body{min-height:100vh}
     .dd{position:relative;display:inline-block}
@@ -324,10 +324,16 @@
     .dd-menu a{display:block;padding:7px 10px;border-radius:8px;border-bottom:0!important;white-space:nowrap}
     .dd-menu a:hover{background:#0f172a;text-decoration:none}
     .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
-    @media (hover:none),(max-width:700px){.dd-menu{display:none!important}}
+    @media (hover:none) and (min-width:701px){.dd-menu{display:none!important}}
     .topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:.9rem}
     .topnav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
     .topnav a:hover,.topnav a[aria-current=page]{border-bottom-color:var(--primary)}
+    .lang{display:inline-flex;gap:6px;margin-left:6px}
+    .lang button{font:inherit;font-size:.75rem;background:none;color:var(--muted,#94a3b8);border:1px solid var(--border-subtle);border-radius:999px;padding:2px 10px;cursor:pointer}
+    .lang button[aria-pressed="true"]{color:var(--text);border-color:var(--primary)}
+    .menu-btn{display:none;background:none;border:1px solid var(--border-subtle);border-radius:8px;padding:8px 10px;cursor:pointer;margin-top:6px}
+    .menu-btn span{display:block;width:22px;height:2px;margin:4px 0;background:var(--text)}
+    @media (max-width:700px){.menu-btn{display:inline-block}.topnav{display:none;flex-direction:column;gap:0;margin-top:8px}.topnav.open{display:flex}.topnav>a,.topnav>.dd>a{display:block;padding:10px 0;border-bottom:1px solid var(--border-subtle)}.dd{display:block}.dd-menu{display:block!important;position:static;border:0;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0}.dd-menu a{white-space:normal}.lang{padding-top:12px;margin-left:0}}
   </style>
 </head>
 <body>
@@ -337,47 +343,37 @@
         <img src="/assets/Ktronics.png" alt="Ktronics logo" class="logo-image" />
         <div>
           <div class="logo">Ktronics AB</div>
-          <div class="tagline">Electronics • Energy Systems • IT & Integration</div>
-          <nav class="topnav" aria-label="Main"><a href="/">Home</a><span class="dd"><a href="/services/">Services</a><span class="dd-menu"><a href="/services/energy-battery-solutions/">Energy &amp; battery solutions</a><a href="/services/power-electronics/">Power electronics &amp; systems engineering</a><a href="/services/embedded-hardware/">Embedded &amp; hardware development</a><a href="/services/software-cloud-integration/">Software, cloud &amp; integration</a><a href="/services/it-consulting-operations/">IT consulting &amp; operations</a><a href="/services/it-electronics-products/">IT &amp; electronics products</a></span></span><a href="/brands/">Brands</a><a href="/about/" aria-current="page">About us</a><a href="/contact/">Contact us</a></nav>
+          <div class="tagline" data-en="Electronics • Energy Systems • IT & Integration" data-sv="Elektronik • Energisystem • IT & integration">Elektronik • Energisystem • IT & integration</div>
+          <button class="menu-btn" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav class="topnav" id="nav" aria-label="Main"><a href="/" data-en="Home" data-sv="Hem">Hem</a><span class="dd"><a href="/services/" data-en="Services" data-sv="Tjänster">Tjänster</a><span class="dd-menu"><a href="/services/energy-battery-solutions/" data-en="Energy &amp; battery solutions" data-sv="Energi- och batterilösningar">Energi- och batterilösningar</a><a href="/services/power-electronics/" data-en="Power electronics &amp; systems engineering" data-sv="Kraftelektronik &amp; systemteknik">Kraftelektronik &amp; systemteknik</a><a href="/services/embedded-hardware/" data-en="Embedded &amp; hardware development" data-sv="Inbyggd &amp; hårdvaruutveckling">Inbyggd &amp; hårdvaruutveckling</a><a href="/services/software-cloud-integration/" data-en="Software, cloud &amp; integration" data-sv="Mjukvara, moln &amp; integration">Mjukvara, moln &amp; integration</a><a href="/services/it-consulting-operations/" data-en="IT consulting &amp; operations" data-sv="IT-konsulting &amp; drift">IT-konsulting &amp; drift</a><a href="/services/it-electronics-products/" data-en="IT &amp; electronics products" data-sv="IT- &amp; elektronikprodukter">IT- &amp; elektronikprodukter</a></span></span><a href="/brands/" data-en="Brands" data-sv="Varumärken">Varumärken</a><a href="/about/" aria-current="page" data-en="About us" data-sv="Om oss">Om oss</a><a href="/contact/" data-en="Contact us" data-sv="Kontakt">Kontakt</a><span class="lang" role="group" aria-label="Language"><button type="button" id="b-en" aria-pressed="false">EN</button><button type="button" id="b-sv" aria-pressed="true">SV</button></span></nav>
         </div>
       </div>
-      <div class="tagline">
-        Katrineholm, Sweden<br />
-        Org.nr: 559469-3508
-      </div>
+      <div class="tagline" data-en="Katrineholm, Sweden<br /> Org.nr: 559469-3508" data-sv="Katrineholm, Sverige<br /> Org.nr: 559469-3508">Katrineholm, Sverige<br /> Org.nr: 559469-3508</div>
     </header>
 
     <main>
       <section class="section" id="about">
-        <h1>About Ktronics AB</h1>
-        <p class="section-intro">
-          Ktronics AB (org.nr 559469-3508, VAT SE559469350801) is an independent Swedish engineering and
-          consulting company based in Katrineholm, founded by <strong>Gayan Kandaudage</strong>
-          (M.Sc. in Electronics, M.Sc. in Computer Science).
-        </p>
-        <p>
-          We combine experience from energy systems, power electronics, embedded development and
-          cloud-native IT platforms. Our role is to help customers design solid architectures, solve hard
-          technical problems and make existing systems easier to operate.
-        </p>
+        <h1 data-en="About Ktronics AB" data-sv="Om Ktronics AB">Om Ktronics AB</h1>
+        <p class="section-intro" data-en="Ktronics AB (org.nr 559469-3508, VAT SE559469350801) is an independent Swedish engineering and consulting company based in Katrineholm, founded by <strong>Gayan Kandaudage</strong> (M.Sc. in Electronics, M.Sc. in Computer Science)." data-sv="Ktronics AB (org.nr 559469-3508, momsnr SE559469350801) är ett oberoende svenskt ingenjörs- och konsultföretag i Katrineholm, grundat av <strong>Gayan Kandaudage</strong> (civilingenjör i elektronik, civilingenjör i datavetenskap).">Ktronics AB (org.nr 559469-3508, momsnr SE559469350801) är ett oberoende svenskt ingenjörs- och konsultföretag i Katrineholm, grundat av <strong>Gayan Kandaudage</strong> (civilingenjör i elektronik, civilingenjör i datavetenskap).</p>
+        <p data-en="We combine experience from energy systems, power electronics, embedded development and cloud-native IT platforms. Our role is to help customers design solid architectures, solve hard technical problems and make existing systems easier to operate." data-sv="Vi kombinerar erfarenhet från energisystem, kraftelektronik, inbyggd utveckling och molnbaserade IT-plattformar. Vår roll är att hjälpa kunder att ta fram robusta arkitekturer, lösa svåra tekniska problem och göra befintliga system enklare att driva.">Vi kombinerar erfarenhet från energisystem, kraftelektronik, inbyggd utveckling och molnbaserade IT-plattformar. Vår roll är att hjälpa kunder att ta fram robusta arkitekturer, lösa svåra tekniska problem och göra befintliga system enklare att driva.</p>
         <div class="pill-row">
-          <span class="pill">Energy & battery systems</span>
-          <span class="pill">Power electronics & control</span>
-          <span class="pill">Embedded & hardware</span>
-          <span class="pill">IT, cloud & integration</span>
+          <span class="pill" data-en="Energy & battery systems" data-sv="Energi- och batterisystem">Energi- och batterisystem</span>
+          <span class="pill" data-en="Power electronics & control" data-sv="Kraftelektronik & styrning">Kraftelektronik & styrning</span>
+          <span class="pill" data-en="Embedded & hardware" data-sv="Inbyggt & hårdvara">Inbyggt & hårdvara</span>
+          <span class="pill" data-en="IT, cloud & integration" data-sv="IT, moln & integration">IT, moln & integration</span>
         </div>
-        <p>See <a href="/#services">what we do</a>, or <a href="/contact/">contact us</a>.</p>
+        <p data-en="See <a href=&quot;/#services&quot;>what we do</a>, or <a href=&quot;/contact/&quot;>contact us</a>." data-sv="Se <a href=&quot;/services/&quot;>vad vi gör</a>, eller <a href=&quot;/contact/&quot;>kontakta oss</a>.">Se <a href="/services/">vad vi gör</a>, eller <a href="/contact/">kontakta oss</a>.</p>
       </section>
       <section class="section" id="brands">
-        <h2>Brands</h2>
-        <p>Ktronics AB also runs the art brand <a href="/brands/">Annitia A.</a>.</p>
+        <h2 data-en="Brands" data-sv="Varumärken">Varumärken</h2>
+        <p data-en="Ktronics AB also runs the art brand <a href=&quot;/brands/&quot;>Annitia A.</a>." data-sv="Ktronics AB driver också konstvarumärket <a href=&quot;/brands/&quot;>Annitia A.</a>.">Ktronics AB driver också konstvarumärket <a href="/brands/">Annitia A.</a>.</p>
       </section>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Ktronics AB. All rights reserved.</span>
+      <span>© <span id="year"></span> Ktronics AB. <span data-en="All rights reserved." data-sv="Alla rättigheter förbehållna.">Alla rättigheter förbehållna.</span></span>
     </footer>
   </div>
+  <script src="/assets/site.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About Ktronics AB","url":"https://ktronics.se/about/","about":{"@type":"Organization","name":"Ktronics AB","url":"https://ktronics.se/","telephone":"+46721819572","email":"ktronicsdev@gmail.com","vatID":"SE559469350801","address":{"@type":"PostalAddress","addressLocality":"Katrineholm","addressCountry":"SE"}}}</script>
 </body>
